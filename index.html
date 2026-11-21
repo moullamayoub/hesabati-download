@@ -178,6 +178,83 @@
       color: var(--text-muted);
     }
 
+    /* بطاقة الـ QR Code لمسح الموقع بالهاتف */
+    .qr-box-container {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0 32px;
+    }
+    .qr-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 22px;
+      max-width: 480px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      transition: all 0.25s ease;
+      text-align: right;
+    }
+    .qr-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .qr-img-wrap {
+      background: #ffffff;
+      padding: 8px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .qr-img-wrap img {
+      display: block;
+      width: 105px;
+      height: 105px;
+    }
+    .qr-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .qr-chip {
+      display: inline-flex;
+      align-self: flex-start;
+      align-items: center;
+      gap: 4px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 9999px;
+    }
+    .qr-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .qr-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+    @media (max-width: 520px) {
+      .qr-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 18px;
+      }
+      .qr-chip {
+        align-self: center;
+      }
+    }
+
     /* شارات المزايا السريعة */
     .quick-badges {
       display: flex;
@@ -453,6 +530,20 @@
           <span>⚡ الحجم: 5.1 ميغابايت</span>
           <span>📱 أندرويد 6.0 فما فوق</span>
           <span>🍎 يدعم iOS كـ Native App</span>
+        </div>
+      </div>
+
+      <!-- بطاقة الـ QR Code لمسح الموقع بالهاتف -->
+      <div class="qr-box-container">
+        <div class="qr-card">
+          <div class="qr-img-wrap">
+            <img src="assets/qr_code.png" alt="QR Code لموقع حساباتي" width="105" height="105">
+          </div>
+          <div class="qr-info">
+            <span class="qr-chip">📲 امسح بكاميرا الهاتف</span>
+            <div class="qr-title">افتح الموقع وحمّل التطبيق مباشرة</div>
+            <p class="qr-desc">امسح الرمز بكاميرا هاتفك لفتح صفحة التحميل وتثبيت التطبيق ومشاركته فوراً</p>
+          </div>
         </div>
       </div>
 
