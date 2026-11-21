@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تطبيق حساباتي | تدوين الديون والمصاريف فائق السرعة بالصوت</title>
-  <meta name="description" content="تطبيق حساباتي للأندرويد: دوّن ديونك ومصاريفك بصوتك بالدارجة الجزائرية دون إنترنت، مع حسم الديون تلقائياً وتصدير تقارير Excel و Word بنقرة واحدة.">
+  <title>تطبيق حساباتي | تدوين الديون والمصاريف فائق السرعة بالذكاء الاصطناعي</title>
+  <meta name="description" content="تطبيق حساباتي: دوّن ديونك ومصاريفك بالدارجة الجزائرية دون إنترنت، مع دفتر حسابات شخصي، تذكير WhatsApp بنقرة واحدة، مواعيد السداد وتنبيهات الهاتف، وقفل الأمان بالـ PIN.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1140px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -66,7 +66,7 @@
       justify-content: center;
       box-shadow: 0 4px 12px var(--primary-glow);
     }
-    .brand-text h1 { font-size: 1.3rem; font-weight: 800; }
+    .brand-text h1 { font-size: 1.35rem; font-weight: 800; }
     .brand-text p { font-size: 0.72rem; color: var(--text-muted); }
 
     .nav-links {
@@ -74,23 +74,24 @@
       align-items: center;
       gap: 16px;
     }
-    .btn-nav-github {
+    .btn-nav-download {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 16px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      color: var(--text);
+      padding: 10px 20px;
+      background: var(--primary);
+      border: 1px solid var(--primary-hover);
+      color: white;
       border-radius: 9999px;
       text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
+      font-size: 0.88rem;
+      font-weight: 700;
       transition: all 0.2s ease;
+      box-shadow: 0 4px 14px var(--primary-glow);
     }
-    .btn-nav-github:hover {
-      background: #334155;
-      border-color: #64748b;
+    .btn-nav-download:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
     }
 
     /* قسم الهيرو (Hero Section) */
@@ -102,21 +103,21 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 6px 16px;
+      padding: 8px 20px;
       background: rgba(16, 185, 129, 0.12);
-      border: 1px solid rgba(16, 185, 129, 0.3);
+      border: 1px solid rgba(16, 185, 129, 0.35);
       color: #34d399;
       border-radius: 9999px;
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       font-weight: 700;
       margin-bottom: 24px;
     }
     .hero h2 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-size: clamp(2.1rem, 5.2vw, 3.4rem);
       font-weight: 900;
       line-height: 1.3;
       margin-bottom: 20px;
-      max-width: 850px;
+      max-width: 900px;
       margin-inline: auto;
     }
     .hero h2 span {
@@ -127,9 +128,14 @@
     .hero-subtitle {
       font-size: 1.15rem;
       color: var(--text-muted);
-      max-width: 650px;
+      max-width: 720px;
       margin: 0 auto 36px;
-      line-height: 1.7;
+      line-height: 1.75;
+    }
+    .hero-subtitle em {
+      color: #34d399;
+      font-style: normal;
+      font-weight: 700;
     }
 
     /* زر التحميل الرئيسي المتوهج */
@@ -137,8 +143,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 50px;
+      gap: 14px;
+      margin-bottom: 40px;
     }
     .download-btn {
       display: inline-flex;
@@ -146,10 +152,10 @@
       gap: 16px;
       background: linear-gradient(135deg, #10b981, #059669);
       color: #ffffff;
-      padding: 16px 36px;
+      padding: 16px 40px;
       border-radius: 9999px;
       text-decoration: none;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 800;
       box-shadow: 0 10px 30px var(--primary-glow);
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -158,16 +164,39 @@
     }
     .download-btn:hover {
       transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 16px 40px rgba(16, 185, 129, 0.4);
+      box-shadow: 0 18px 45px rgba(16, 185, 129, 0.45);
     }
     .download-btn:active {
       transform: translateY(0);
     }
     .download-meta {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 16px;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
+    }
+
+    /* شارات المزايا السريعة */
+    .quick-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 50px;
+    }
+    .quick-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 9999px;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      color: var(--text);
+      font-weight: 600;
     }
 
     /* معرض الشاشات (Mockups) */
@@ -175,20 +204,21 @@
       display: flex;
       justify-content: center;
       gap: 20px;
-      margin: 40px 0 70px;
+      margin: 40px 0 80px;
       flex-wrap: wrap;
     }
     .phone-mockup {
-      width: 290px;
+      width: 255px;
       background: #0f172a;
       border: 5px solid #334155;
       border-radius: 36px;
       overflow: hidden;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
-      transition: transform 0.3s ease;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75);
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
     .phone-mockup:hover {
       transform: translateY(-8px);
+      border-color: var(--primary);
     }
     .phone-mockup img {
       width: 100%;
@@ -206,67 +236,88 @@
 
     /* شبكة المميزات (Features) */
     .features {
-      padding: 60px 0;
+      padding: 50px 0;
     }
     .section-title {
       text-align: center;
       margin-bottom: 48px;
     }
     .section-title h3 {
-      font-size: 2rem;
-      font-weight: 800;
+      font-size: 2.1rem;
+      font-weight: 900;
       margin-bottom: 12px;
     }
     .section-title p {
       color: var(--text-muted);
-      font-size: 1rem;
+      font-size: 1.05rem;
+      max-width: 650px;
+      margin: 0 auto;
     }
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
     }
     .feature-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 28px;
-      transition: all 0.2s ease;
+      padding: 26px;
+      transition: all 0.25s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
     }
     .feature-card:hover {
       border-color: #64748b;
       transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+    .feature-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
     }
     .feature-icon {
       font-size: 2rem;
-      margin-bottom: 16px;
       display: inline-block;
     }
+    .feature-tag-new {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 9999px;
+    }
     .feature-card h4 {
-      font-size: 1.15rem;
-      font-weight: 700;
+      font-size: 1.18rem;
+      font-weight: 800;
       margin-bottom: 10px;
       color: var(--text);
     }
     .feature-card p {
       color: var(--text-muted);
-      font-size: 0.9rem;
-      line-height: 1.6;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      flex: 1;
     }
 
-    /* خطوات التثبيت (Installation Steps) */
+    /* خطوات الاستخدام (Installation Steps) */
     .steps-section {
       background: var(--bg-card-subtle);
       border-radius: var(--radius);
-      padding: 40px;
+      padding: 44px 36px;
       margin: 60px 0;
       border: 1px solid var(--border);
     }
     .steps-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-      margin-top: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 28px;
+      margin-top: 32px;
     }
     .step-item {
       display: flex;
@@ -274,25 +325,62 @@
       align-items: flex-start;
     }
     .step-num {
-      width: 36px;
-      height: 36px;
-      background: var(--primary);
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-hover));
       color: #ffffff;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
+      font-weight: 900;
+      font-size: 1.1rem;
       flex-shrink: 0;
+      box-shadow: 0 4px 10px var(--primary-glow);
     }
     .step-item h5 {
-      font-size: 1rem;
-      font-weight: 700;
+      font-size: 1.05rem;
+      font-weight: 800;
       margin-bottom: 6px;
     }
     .step-item p {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* قسم الأسئلة الشائعة (FAQ) */
+    .faq-section {
+      padding: 40px 0 70px;
+    }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 20px;
+      margin-top: 36px;
+    }
+    @media (max-width: 600px) {
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+    .faq-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .faq-card h5 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #34d399;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .faq-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.65;
     }
 
     /* التذييل (Footer) */
@@ -300,10 +388,12 @@
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       padding: 40px 0;
       text-align: center;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
     }
-    footer a { color: var(--primary); text-decoration: none; }
+    footer strong { color: var(--text); }
+    footer a { color: var(--primary); text-decoration: none; font-weight: 700; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -320,18 +410,18 @@
         </div>
         <div class="brand-text">
           <h1>حساباتي</h1>
-          <p>تدوين الديون والمصاريف بالصوت</p>
+          <p>تدوين الديون والمصاريف بالذكاء الاصطناعي</p>
         </div>
       </a>
 
       <div class="nav-links">
-        <a href="./hesabati.apk?v=1.4.0" download="hesabati.apk" class="btn-nav-github" style="background: var(--primary); color: white; border: none;">
+        <a href="./hesabati.apk?v=1.5.0" download="hesabati.apk" class="btn-nav-download">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
-          <span>تنزيل APK</span>
+          <span>تنزيل APK مجاناً</span>
         </a>
       </div>
     </nav>
@@ -339,30 +429,41 @@
     <!-- الهيرو -->
     <header class="hero">
       <div class="badge-pill">
-        <span>🇩🇿 تحديث v1.4.0: استخراج تقارير مخصصة وإصلاح شامل للصوت</span>
+        <span>🇩🇿 تحديث v1.5.0: كشف حساب الشخص، تذكير WhatsApp، ومواعيد السداد والتنبيهات</span>
       </div>
-      <h2>دوّن ديونك ومصاريفك <span>بصوتك بالدارجة</span> في ثانية واحدة</h2>
+      <h2>دوّن ديونك ومصاريفك <span>بالدارجة الجزائرية</span> في ثوانٍ معدودة</h2>
       <p class="hero-subtitle">
-        قل بالدارجة: <em>"سلفت 500 الف من عند محمد"</em> أو <em>"خلصت محمد 200 الف"</em> ليقوم التطبيق بالحساب الفوري، وخصم الدين تلقائياً، واستخراج تقارير مالية ذكية ومخصصة (Excel، PDF، Word، كشف واتساب) دون عناء.
+        اكتب بالدارجة: <em>"عطيت لمحمد 500 الف"</em> أو <em>"خلصت كمال زوج ملاين"</em> ليقوم التطبيق بالمعالجة الفورية عبر الذكاء الاصطناعي، وحسم الديون تلقائياً، وإدارة مواعيد الاستحقاق، وإرسال تذكيرات الواتساب، وتصدير تقارير رسمية (Excel, PDF, Word).
       </p>
 
       <div class="cta-container">
-        <a href="./hesabati.apk?v=1.4.0" class="download-btn" download="hesabati.apk">
+        <a href="./hesabati.apk?v=1.5.0" class="download-btn" download="hesabati.apk">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
           <div style="text-align: right;">
-            <div style="font-size: 0.75rem; opacity: 0.9; font-weight: 500;">تحميل مباشر ومجاني 100%</div>
+            <div style="font-size: 0.78rem; opacity: 0.9; font-weight: 500;">تحميل مباشر ومجاني 100%</div>
             <div>تنزيل تطبيق حساباتي (APK)</div>
           </div>
         </a>
         <div class="download-meta">
-          <span>📦 الإصدار v1.4.0 (التقارير الذكية وإصلاح الصوت والفويسات)</span>
-          <span>⚡ الحجم: 4.6 ميغابايت</span>
+          <span>📦 الإصدار v1.5.0 (الميزات الكبرى ونوافذ العرض الاحترافية)</span>
+          <span>⚡ الحجم: 5.1 ميغابايت</span>
           <span>📱 أندرويد 6.0 فما فوق</span>
+          <span>🍎 يدعم iOS كـ Native App</span>
         </div>
+      </div>
+
+      <!-- المزايا السريعة -->
+      <div class="quick-badges">
+        <span class="quick-badge">⚡ ذكاء اصطناعي فوري (0.2 ثانية)</span>
+        <span class="quick-badge">👥 كشف حساب شخصي</span>
+        <span class="quick-badge">💬 تذكير WhatsApp بنقرة</span>
+        <span class="quick-badge">🔔 تنبيهات مواعيد السداد</span>
+        <span class="quick-badge">🔒 قفل أمان برمز PIN</span>
+        <span class="quick-badge">📴 يعمل بدون إنترنت 100%</span>
       </div>
     </header>
 
@@ -370,96 +471,194 @@
     <section class="screens-showcase">
       <div class="phone-mockup">
         <img src="assets/screen_dark.png" alt="الوضع الليلي الفاخر - حساباتي">
-        <div class="mockup-caption">🌙 الوضع الليلي الفاخر (Dark Mode)</div>
+        <div class="mockup-caption">🌙 الوضع الليلي الفاخر مع التسجيل السريع</div>
       </div>
       <div class="phone-mockup">
-        <img src="assets/screen_light.png" alt="الوضع النهاري ولوحة التحكم">
-        <div class="mockup-caption">☀️ الوضع الفاتح ولوحة المؤشرات الذكية</div>
+        <img src="assets/screen_alerts.png" alt="مركز التنبيهات ومواعيد السداد">
+        <div class="mockup-caption">🔔 مركز التنبيهات ومواعيد الاستحقاق</div>
       </div>
       <div class="phone-mockup">
-        <img src="assets/screen_settings.png" alt="الإعدادات النظيفة وتصفير السجلات">
-        <div class="mockup-caption">⚙️ إعدادات مبسطة وتصفير الديون بنقرة واحدة</div>
+        <img src="assets/screen_light.png" alt="الوضع النهاري ولوحة المؤشرات الذكية">
+        <div class="mockup-caption">☀️ الوضع النهاري ولوحة المؤشرات الذكية</div>
+      </div>
+      <div class="phone-mockup">
+        <img src="assets/screen_settings.png" alt="الإعدادات وقفل الأمان والنسخ الاحتياطي">
+        <div class="mockup-caption">⚙️ قفل الـ PIN والنسخ الاحتياطي السحابي</div>
       </div>
     </section>
 
-    <!-- المميزات -->
+    <!-- المميزات الشاملة -->
     <section class="features">
       <div class="section-title">
-        <h3>كل ما تحتاجه لإدارة أموالك ومعاملاتك</h3>
-        <p>مصمم ليكون الأسرع والأسهل في الاستخدام اليومي لأصحاب الديون والأنشطة التجارية</p>
+        <h3>كل ما تحتاجه لإدارة ديونك ومصاريفك بكفاءة متناهية</h3>
+        <p>مبني خصيصاً ليناسب الواقع الجزائري وأصحاب المعاملات اليومية والأنشطة التجارية</p>
       </div>
 
       <div class="features-grid">
+        <!-- ميزة 1 -->
         <div class="feature-card">
-          <span class="feature-icon">🎙️</span>
-          <h4>تفريغ صوتي فائق الدقة بالدارجة</h4>
-          <p>يفهم اللهجة الجزائرية بمختلف أشكالها (الف، مية الف، مليون، سنتيم، دراهم) بدقة ذكاء اصطناعي متقدمة.</p>
+          <div class="feature-card-header">
+            <span class="feature-icon">⚡</span>
+            <span class="feature-tag-new">فائق السرعة</span>
+          </div>
+          <h4>ذكاء اصطناعي متطور للدارجة الجزائرية</h4>
+          <p>يفهم اللهجة الجزائرية بمختلف تعابيرها (الف، مية الف، ملاين، سنتيم، دراهم، سلفة، تسليف، كريدي، قضيان) بدقة فائقة وبسرعة استجابة لا تتعدى 0.2 ثانية.</p>
         </div>
 
+        <!-- ميزة 2 -->
         <div class="feature-card">
-          <span class="feature-icon">💸</span>
+          <div class="feature-card-header">
+            <span class="feature-icon">👥</span>
+            <span class="feature-tag-new">جديد 🔥</span>
+          </div>
+          <h4>دفتر حسابات مخصص لكل شخص (Ledger)</h4>
+          <p>صفحة مستقلة لكل شخص تظهر مجموع ما سلّفته له، وما استرجعته منه، وصافي الدين المتبقي بالدينار والسنتيم مع جدول زمني لكافة حركاته المالية.</p>
+        </div>
+
+        <!-- ميزة 3 -->
+        <div class="feature-card">
+          <div class="feature-card-header">
+            <span class="feature-icon">💬</span>
+            <span class="feature-tag-new">جديد 🔥</span>
+          </div>
+          <h4>تذكير بالديون بنقرة واحدة عبر WhatsApp</h4>
+          <p>أرسل تذكيراً مهذباً ومفصلاً بالدين عبر تطبيق WhatsApp بضغطة زر واحدة، يتضمن ملخص الحساب والأرصدة دون الحاجة لكتابة أو تذكر الأرقام يدوياً.</p>
+        </div>
+
+        <!-- ميزة 4 -->
+        <div class="feature-card">
+          <div class="feature-card-header">
+            <span class="feature-icon">🔔</span>
+            <span class="feature-tag-new">جديد 🔥</span>
+          </div>
+          <h4>مركز التنبيهات ومواعيد الاستحقاق</h4>
+          <p>حدّد موعد سداد لكل دين مع إمكانية كتابة ملاحظة، واستقبل إشعارات وتنبيهات مباشرة على هاتفك في يوم الاستحقاق، مع أزرار تمديد الأجل بنقرة واحدة.</p>
+        </div>
+
+        <!-- ميزة 5 -->
+        <div class="feature-card">
+          <div class="feature-card-header">
+            <span class="feature-icon">🔒</span>
+            <span class="feature-tag-new">جديد 🔥</span>
+          </div>
+          <h4>قفل الأمان والخصوصية برمز PIN</h4>
+          <p>احمِ بياناتك المالية ومعاملاتك من أعين المتطفلين بقفل PIN خاص، مع خيارات سهلة لتغيير الرمز أو تعطيله في أي وقت بأمان تام.</p>
+        </div>
+
+        <!-- ميزة 6 -->
+        <div class="feature-card">
+          <div class="feature-card-header">
+            <span class="feature-icon">💸</span>
+          </div>
           <h4>حسم وسداد الديون تلقائياً</h4>
-          <p>عندما تقول "خلصت محمد مبلغ"، يخصم المبلغ فوراً من دينه ويُسجل في جدول المقاصة التفصيلي.</p>
+          <p>بمجرد تسجيل "خلصت فلان" أو "فلان خلصني"، يخصم المبلغ تلقائياً من دينه ويُسجل في جدول المقاصة مع تدقيق رياضي يضمن تطابق الحسابات 100%.</p>
         </div>
 
+        <!-- ميزة 7 -->
         <div class="feature-card">
-          <span class="feature-icon">📊</span>
-          <h4>تقارير Excel مجمعة بـ 5 صفحات</h4>
-          <p>ملف إكسل منسق جاهز يضم لوحة تحكم، تقريراً أسبوعياً، شهرياً، سنوياً، وسجل المعاملات التفصيلي.</p>
+          <div class="feature-card-header">
+            <span class="feature-icon">📊</span>
+          </div>
+          <h4>تقارير رسمية شاملة (PDF / Excel / Word)</h4>
+          <p>استخرج كشوفات حساب رسمية للطباعة، وملف Excel مجمع بخمس صفحات منسقة بالكامل، ومستندات Word لتوثيق وتوقيع المعاملات المالية.</p>
         </div>
 
+        <!-- ميزة 8 -->
         <div class="feature-card">
-          <span class="feature-icon">📄</span>
-          <h4>تقارير Word احترافية للطباعة</h4>
-          <p>استخرج مستند Word (.docx) رسمي بجدول أرصدة الأشخاص لتوثيق الحسابات ومشاركتها.</p>
+          <div class="feature-card-header">
+            <span class="feature-icon">☁️</span>
+            <span class="feature-tag-new">جديد 🔥</span>
+          </div>
+          <h4>نسخ احتياطي محلي وسحابي (JSON & Drive)</h4>
+          <p>صدّر نسخة احتياطية كاملة من بياناتك بملف JSON واسترجعها عند تغيير هاتفك، أو قم بمزامنة التقرير مع Google Drive بنقرة واحدة.</p>
         </div>
 
+        <!-- ميزة 9 -->
         <div class="feature-card">
-          <span class="feature-icon">☁️</span>
-          <h4>مزامنة وحفظ في Google Drive</h4>
-          <p>بضغطة زر واحدة أرسل التقرير إلى حسابك في Google Drive لفتحه من الكمبيوتر بدون كابلات.</p>
+          <div class="feature-card-header">
+            <span class="feature-icon">✨</span>
+            <span class="feature-tag-new">جديد 🔥</span>
+          </div>
+          <h4>نوافذ منبثقة موسّطة وتصميم فخم</h4>
+          <p>تجربة مستخدم راقية بنوافذ عائمة موسّطة في منتصف الشاشة مع قفل التمرير وسرعة فائقة، وتوافق كامل مع الوضعين الليلي والنهاري.</p>
         </div>
 
+        <!-- ميزة 10 -->
         <div class="feature-card">
-          <span class="feature-icon">🔒</span>
-          <h4>أمان تام ويعمل بدون إنترنت (Offline)</h4>
-          <p>بياناتك المالية مشفرة ومحفوظة على جهازك فقط. التطبيق يعمل بكفاءة كاملة حتى في غياب الشبكة.</p>
+          <div class="feature-card-header">
+            <span class="feature-icon">🛡️</span>
+          </div>
+          <h4>يعمل 100% بدون إنترنت (Offline-First)</h4>
+          <p>كل معاملاتك وسجلاتك مخزنة محلياً على جهازك داخل قاعدة بيانات IndexedDB مشفرة وسريعة. خصوصيتك ملكك وحدك ولا تغادر جهازك أبداً.</p>
         </div>
       </div>
     </section>
 
-    <!-- خطوات التثبيت -->
+    <!-- خطوات الاستخدام -->
     <section class="steps-section">
-      <h4 style="font-size: 1.4rem; font-weight: 800; text-align: center;">كيف تثبت التطبيق على هاتفك؟</h4>
+      <h4 style="font-size: 1.5rem; font-weight: 900; text-align: center;">كيف تبدأ استخدام التطبيق؟</h4>
       <div class="steps-grid">
         <div class="step-item">
           <div class="step-num">1</div>
           <div>
-            <h5>تحميل ملف الـ APK</h5>
-            <p>اضغط على زر التنزيل الأخضر بالأعلى وسيتم حفظ ملف <code>hesabati.apk</code> على هاتفك.</p>
+            <h5>تحميل وتثبيت الـ APK</h5>
+            <p>اضغط على زر التنزيل بالأعلى، ثم افتح ملف <code>hesabati.apk</code> واضغط "سماح بالتثبيت".</p>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">2</div>
           <div>
-            <h5>الموافقة على التثبيت</h5>
-            <p>افتح الملف الذي تم تحميله، وإذا ظهر تنبيه تثبيت التطبيقات، اضغط "سماح" (Allow from this source).</p>
+            <h5>دوّن أول معاملة بالدارجة</h5>
+            <p>اكتب بالدارجة في الحقل السريع أو اضغط على أحد أزرار الإدخال الفوري (سلفة، تسليف، أو سداد).</p>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">3</div>
           <div>
-            <h5>ابدأ التدوين فوراً!</h5>
-            <p>افتح التطبيق وانطق أول معاملة لك واستمتع بالتقارير المنظمة وحساباتك الدقيقة.</p>
+            <h5>تابع الديون واستخرج التقارير</h5>
+            <p>اضبط مواعيد الاستحقاق، أرسل تذكيرات WhatsApp لعملائك، واستخرج كشوفات حسابك بملفات PDF و Excel بضغطة زر.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- الأسئلة الشائعة -->
+    <section class="faq-section">
+      <div class="section-title">
+        <h3>الأسئلة الشائعة</h3>
+        <p>إجابات سريعة على أهم استفسارات المستخدمين</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h5>❓ هل يحتاج التطبيق إلى إنترنت ليعمل؟</h5>
+          <p>لا، التطبيق مبني بمعمارية Offline-First ويعمل بكامل وظائفه الحسابية دون إنترنت. يلزم الاتصال بالإنترنت فقط عند طلب المعالجة بالذكاء الاصطناعي أو المزامنة مع Google Drive.</p>
+        </div>
+
+        <div class="faq-card">
+          <h5>❓ كيف يفهم التطبيق مبالغ السنتيم والدينار؟</h5>
+          <p>نظام المعالجة الذكي مدرب خصيصاً على اللهجة الجزائرية؛ فعندما تكتب "500 الف" يفهم أنها 5,000 دج، وعندما تكتب "زوج ملاين" يفهم أنها 20,000 دج تلقائياً دون أي التباس.</p>
+        </div>
+
+        <div class="faq-card">
+          <h5>❓ كيف أرسل تذكيراً بالدين لشخص عبر واتساب؟</h5>
+          <p>من قسم "دفتر الأشخاص والعملاء"، اضغط على اسم الشخص ليفتح كشف حسابه الخاص، ثم اضغط على زر "💬 تذكير WhatsApp"؛ سيفتح تطبيق واتساب فوراً برسالة منسقة وجاهزة للإرسال دون أي إحراج.</p>
+        </div>
+
+        <div class="faq-card">
+          <h5>❓ هل بياناتي وأرقامي المالية آمنة؟</h5>
+          <p>نعم 100%، بياناتك مسجلة في جهازك المحلي فقط. بالإضافة إلى ذلك، يمكنك تفعيل قفل الأمان برمز PIN من الإعدادات لمنع أي شخص يمسك هاتفك من الاطلاع على معاملاتك.</p>
         </div>
       </div>
     </section>
 
     <!-- التذييل -->
     <footer>
-      <p>تطبيق <strong>حساباتي</strong> &copy; 2026 | طُوّر لخدمة رواد الأعمال وأصحاب المعاملات 🇩🇿</p>
+      <p>تطبيق <strong>حساباتي</strong> &copy; 2026 | رفيقك الذكي لإدارة الديون والمصاريف اليومية 🇩🇿</p>
       <p style="margin-top: 8px;">تطبيق آمن ومشفر محلياً 100% 🔒 | يدعم أندرويد و iOS</p>
+      <p style="margin-top: 12px; font-size: 0.8rem;">
+        <a href="./hesabati.apk?v=1.5.0" download="hesabati.apk">تحميل أحدث إصدار APK (v1.5.0)</a>
+      </p>
     </footer>
   </div>
 </body>
